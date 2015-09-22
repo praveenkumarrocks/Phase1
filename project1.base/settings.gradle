@@ -1,0 +1,2 @@
+include ":project1.common"
+project(':project1.common').projectDir = new File(settingsDir, '../project1.common')
