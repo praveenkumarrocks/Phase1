@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.project1.base.config.BaseConfiguration;
+import com.project1.base.config.AppConfig;
 import com.project1.base.model.User;
 import com.project1.base.repository.UserRepository;
 
@@ -17,7 +17,7 @@ import com.project1.base.repository.UserRepository;
 public class UserTest {
 	
 	@Configuration
-	@Import({BaseConfiguration.class})
+	@Import({AppConfig.class})
 	public static class DataSourceTestConfiguration {
 
 	}

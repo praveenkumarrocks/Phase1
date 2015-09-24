@@ -2,17 +2,6 @@
 xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
 http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
-
-	 <display-name>Project1</display-name>
-	  <welcome-file-list>
-	    <welcome-file>/WEB-INF/html/index.jsp</welcome-file>
-	    <welcome-file>index.htm</welcome-file>
-	    <welcome-file>index.jsp</welcome-file>
-	    <welcome-file>default.html</welcome-file>
-	    <welcome-file>default.htm</welcome-file>
-	    <welcome-file>default.jsp</welcome-file>
-	  </welcome-file-list>
-
 	<!-- Declare a Spring MVC DispatcherServlet as usual -->
     <servlet>
         <servlet-name>project1</servlet-name>
@@ -24,12 +13,6 @@ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
             <param-value>
                 org.springframework.web.context.support.AnnotationConfigWebApplicationContext
             </param-value>
-        </init-param>
-        <!-- Again, config locations must consist of one or more comma- or space-delimited
-            and fully-qualified @Configuration classes -->
-        <init-param>
-            <param-name>contextConfigLocation</param-name>
-            <param-value>com.project1.base.config.WebMvcConfiguration</param-value>
         </init-param>
     </servlet>
 	
@@ -47,7 +30,7 @@ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
         specified for component-scanning -->
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>com.project1.base.config.ServerConfiguration</param-value>
+        <param-value>com.project1.base.config.ServerConfig</param-value>
     </context-param>
 
     <!-- Bootstrap the root application context as usual using ContextLoaderListener -->
