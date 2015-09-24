@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
@@ -8,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Bicycleshop Bootstarp Website Template | Login :: w3layouts</title>
+<title>Bicycleshop Bootstarp Website Template | Best Buy :: w3layouts</title>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery-1.11.0.min.js"></script>
@@ -24,17 +23,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script src="js/jquery.etalage.min.js"></script>
 <link href="css/component.css" rel='stylesheet' type='text/css' />
 <!-- Include the Etalage files -->
+<script>
+		jQuery(document).ready(function($){
+
+			$('#etalage').etalage({
+				thumb_image_width: 400,
+				thumb_image_height: 350,
+				
+				show_hint: true,
+				click_callback: function(image_anchor, instance_id){
+					alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+				}
+			});
+			// This is for the dropdown list example:
+			$('.dropdownlist').change(function(){
+				etalage_show( $(this).find('option:selected').attr('class') );
+			});
+
+	});
+</script>
 <!----//details-product-slider--->
-<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
-		    <script type="text/javascript">
-			    $(document).ready(function () {
-			        $('#horizontalTab').easyResponsiveTabs({
-			            type: 'default', //Types: default, vertical, accordion           
-			            width: 'auto', //auto or any width like 600px
-			            fit: true   // 100% fit in a container
-			        });
-			    });
-			   </script>	
 </head>
 <body>
 <!-- Header Starts Here -->
@@ -42,18 +50,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="container">
 		<div class="header-top">
 			<div class="logo">
-				<a href="/project1/index"><img src="images/logo.png"></a>
+				<a href="index.html"><img src="images/logo.png"></a>
 			</div>
 			<span class="menu"></span>
 			<div class="clear"></div>
 			<div class="navigation">
 				<ul class="navig">
-					<li><a href="/project1/bikes">Bikes</a></li>
-					<li><a href="/project1/best">Best Buy</a></li>
-					<li><a href="/project1/bikes">Offers</a></li>
-					<li><a href="/project1/best">Accessories</a></li>
-					<li><a href="/project1/contact">Contact</a></li>
-					<li><a href="/project1/about">About Us</a></li>
+					<li><a href="bikes.html">Bikes</a></li>
+					<li><a href="best.html">Best Buy</a></li>
+					<li><a href="bikes.html">Offers</a></li>
+					<li><a href="best.html">Accessories</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="about.html">About Us</a></li>
 				</ul>
 				<script>
 					$( "span.menu" ).click(function() {
@@ -76,8 +84,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<li><a href="">Clasical</a></li>
 						<li><a href="">New trend</a></li>
 						<li><a href="">New Release</a></li>
-						<li><a href="/project1/login">Log In</a></li>
-						<li><a href="/project1/register">Register</a></li>
+						<li><a href="login.html">Log In</a></li>
+						<li><a href="register.html">Register</a></li>
 					</ul>
 				</div>
 				<div class="latest-bis">
@@ -112,40 +120,61 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				     </div>
 
 			</div>
-			<div class="new-product prodys">
+			<div class="new-product">
 				<div class="new-product-top">
 					<ul class="product-top-list">
-						<li><a href="/project1/index">Home</a>&nbsp;<span>&gt;</span></li>
-						<li><a href="#">Account</a>&nbsp;<span>&gt;</span></li>
-						<li><span class="act"><a href="/project1/login">Log In</a></span>&nbsp;</li>
+						<li><a href="index.html">Home</a>&nbsp;<span>&gt;</span></li>
+						<li><span class="act">Contact Us</span>&nbsp;</li>
 					</ul>
-					<p class="back"><a href="/project1/index">Back to Previous</a></p>
+					<p class="back"><a href="index.html">Back to Previous</a></p>
 					<div class="clearfix"></div>
 				</div>
-				<div class="account_grid">
-				   <div class="col-md-6 login-right">
-				  	<h3>REGISTERED CUSTOMERS</h3>
-					<p>If you have an account with us, please log in.</p>
-					<form action="/project1/login">
-					  <div>
-						<span>Email Address<label>*</label></span>
-						<input type="text" name="userName" id="userName"> 
-					  </div>
-					  <div>
-						<span>Password<label>*</label></span>
-						<input type="password" name="password" id="password"> 
-					  </div>
-					  <a class="forgot" href="#">Forgot Your Password?</a>
-					  <input type="submit" value="Login">
-				    </form>
-				   </div>	
-				   <div class="col-md-6 login-left">
-				  	 <h3>NEW CUSTOMERS</h3>
-					 <p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
-					 <a class="acount-btn" href="/project1/register">Create an Account</a>
-				   </div>
-				   <div class="clearfix"> </div>
-				 </div>
+				<div class="singel_right">
+			     <div class="lcontact span_1_of_contact">
+				      <div class="contact-form">
+				  	        <form method="post" action="contact-post.html">
+					    	    <p class="comment-form-author"><label for="author">Your Name:</label>
+					    	    	<input type="text" class="textbox" value="Enter your name here..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your name here...';}">
+						    	</p>
+						        <p class="comment-form-author"><label for="author">Email:</label>
+						     	   <input type="text" class="textbox" value="Enter your email here..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
+						        </p>
+						        <p class="comment-form-author"><label for="author">Message:</label>
+						    	  <textarea value="Enter your message here..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Enter your message here...</textarea>
+						        </p>
+						        <input name="submit" type="submit" id="submit" value="Submit">
+					        </form>
+				       </div>
+			     </div>
+			     <div class="contact_grid span_2_of_contact_right">
+					<h3>Address</h3>
+				    <div class="address">
+						<i class="pin_icon"></i>
+					    <div class="contact_address">
+						  Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non
+					    </div>
+					    <div class="clearfix"></div>
+					</div>
+					<div class="address">
+						<i class="phone"></i>
+					    <div class="contact_address">
+						   1-25-2568-897
+					    </div>
+					    <div class="clearfix"></div>
+					</div>
+					<div class="address">
+						<i class="mail"></i>
+					    <div class="contact_email">
+						  <a href="mailto:example@gmail.com">info(at)company.com</a>
+					    </div>
+					    <div class="clearfix"></div>
+					</div>
+		        </div>
+		        <div class="clearfix"></div>
+		    </div>
+		    <div class="map">
+		    	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387144.007583421!2d-73.97800349999999!3d40.7056308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1413440825630" frameborder="0" style="border:0"></iframe>
+		    </div>
 			</div>
 			<div class="clearfix"></div>
 			<!--- fOOTER Starts Here --->
@@ -170,37 +199,3 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!--- fOOTER Starts Here --->
 </body>
 </html>
-=======
-<!DOCTYPE HTML>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Login</title>
-</head>
-<body>
-<form  name="f" th:action="@{/login}" method="get">
-<h2>${title}</h2>	
-<h2>${message}</h2>	
-<div>
-<span>
-<label for="userName" style="width:100px">User Name</label>
-<input type="text" id="userName" name="userName" style="width:100px" ></input>
-</span>
-</div>
-<br>
-<div>
-<span>
-<label for="password" style="width:100px">Password</label>
-<input type="password" id="password" name="password" style="width:100px" ></input>
-</span>
-</div>
-<div>
-<br>
-</div>
-<div>
-<input type="submit" id="submitButton" value="Login"></input>
-</div>
-</form>
-</body>
-</html>
->>>>>>> branch 'master' of https://github.com/praveenkumarrocks/Phase1

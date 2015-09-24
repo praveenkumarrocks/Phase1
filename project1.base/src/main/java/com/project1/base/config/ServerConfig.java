@@ -29,7 +29,7 @@ public class ServerConfig extends WebMvcConfigurerAdapter {
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/js/**","/images/**","/css/**")
-				.addResourceLocations("/WEB-INF/views/js/","/WEB-INF/views/images/","/WEB-INF/views/css/")
+				.addResourceLocations("/WEB-INF/js/","/WEB-INF/images/","/WEB-INF/css/")
 				.setCachePeriod(315569126);
 		registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
 	}

@@ -40,13 +40,21 @@ public class ViewController {
 				userSession.setUser(user);
 				model.addObject("title", "Home Page!");
 				model.addObject("message", "This is welcome page!");
-				model.setViewName("home");
+				model.setViewName("index");
 			}else{
 				model.addObject("title", "Login Page!");
 				model.addObject("message", "Error while loggin in, please check username and password!");
 				model.setViewName("login");
 			}
 		}
+		return model;
+	}
+	
+	@RequestMapping(value = {"/register"}, method = RequestMethod.GET)
+	public ModelAndView register() {
+		ModelAndView model = new ModelAndView();
+		model.addObject("title", "Register!");
+		model.setViewName("register");
 		return model;
 	}
 }
