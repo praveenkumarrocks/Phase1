@@ -24,11 +24,11 @@ public class UserController {
 	@RequestMapping(value = "/addUser", method = RequestMethod.GET)
 	@ResponseStatus(HttpStatus.OK)
 	public ModelAndView addUser(@RequestParam Map<String, String> params) {
-		String userName = params.get("userName");
+		String emailId = params.get("emailId");
 		String password = params.get("password");
 		String confirmPassword = params.get("confirmPassword");
 		ModelAndView model = new ModelAndView();
-		if(StringUtils.isEmpty(userName) || StringUtils.isEmpty(password)){
+		if(StringUtils.isEmpty(emailId) || StringUtils.isEmpty(password)){
 			model.setViewName("register");
 			model.addObject("message", "Please enter all mandatory fields!");
 			return model;
@@ -38,11 +38,10 @@ public class UserController {
 			return model;
 		}else{
 			User user = new User();
-			user.setUsername(userName);
+			user.setEmailId(emailId);
 			user.setPassword(password);
 			user.setFirstName(params.get("firstName"));
 			user.setLastName(params.get("lastName"));
-			user.setEmailAddress(params.get("emailAddress"));
 			userRepository.save(user);
 			model.setViewName("login");
 			return model;

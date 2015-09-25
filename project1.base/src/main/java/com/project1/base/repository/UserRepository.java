@@ -10,10 +10,7 @@ import com.project1.base.model.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long>{
 	
-	@Query("Select u from User u where LOWER(u.username) = LOWER(:username)")
-	public User getUser(@Param("username") String username);
-	
-	@Query("Select u from User u where LOWER(u.username) = LOWER(:username) and u.password = :password")
-	public User getUser(@Param("username") String username, @Param("password") String password);
+	@Query("Select u from User u where LOWER(u.emailId) = LOWER(:emailId) and u.password = :password")
+	public User getUser(@Param("emailId") String emailId, @Param("password") String password);
 	
 }

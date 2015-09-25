@@ -19,19 +19,14 @@ public class LoginService extends BaseService implements ILoginService{
 	UserRepository loginRepository;
 
 	@Override
-	public User createUser(String loginId, String rawPassword) {
+	public User createUser(String emailId, String rawPassword) {
 		List<GrantedAuthority> grantedAuths = new ArrayList<GrantedAuthority>();
 		grantedAuths.add(new SimpleGrantedAuthority("ROLE_USER"));
 		User user = new User();
-		user.setUsername(loginId);
+		user.setEmailId(emailId);
 		user.setPassword(rawPassword);
 		loginRepository.save(user);
         return user;
-	}
-
-	@Override
-	public User getUser(String loginId) {
-		return loginRepository.getUser(loginId);
 	}
 
 	@Override

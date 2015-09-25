@@ -1,10 +1,22 @@
 package com.project1.base.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.springframework.data.jpa.domain.AbstractPersistable;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+/**
+ * 
+ * @author harkamwaljeet.Singh
+ *
+ */
 
 @Entity
 @Table(name = "project1_user")
@@ -12,34 +24,41 @@ public class User extends AbstractPersistable<Long> {
 	
 	private static final long serialVersionUID = 4775472554921457266L;
 	
-	@Column(name = "user_name", nullable = false, length = 45)
-	private String username;
+	@Column(name = "email_id", nullable = false, length = 255)
+	private String emailId;
 
 	@HashedField
 	@Column(name = "password", nullable = false, length = 255)
 	private String password;
 	
+	@Column(length = 15)
+	private String phoneNumber;
+
 	@Column(name = "first_name", length = 45)
 	private String firstName;
 	
 	@Column(name = "last_name", length = 45)
 	private String lastName;
 	
-	@Column(name = "isActive")
+	@Column(name = "is_active")
 	private boolean active;
 	
-	@Column(length = 15)
-	private String phoneNumber;
+	@JsonManagedReference
+	@OneToMany(targetEntity = Address.class, mappedBy = "user", fetch = FetchType.LAZY)
+	@Column(name="billing_address")
+	private List<Address> billingAddress;
+	
+	@JsonManagedReference
+	@OneToMany(targetEntity = Address.class, mappedBy = "user", fetch = FetchType.LAZY)
+	@Column(name="shipping_address")
+	private List<Address> shippingAddress;
 
-	@Column(name = "email", length = 255)
-	private String emailAddress;
-
-	public String getUsername() {
-		return username;
+	public String getEmailId() {
+		return emailId;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
 	}
 
 	public String getPassword() {
@@ -48,6 +67,14 @@ public class User extends AbstractPersistable<Long> {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
 
 	public String getFirstName() {
@@ -74,20 +101,20 @@ public class User extends AbstractPersistable<Long> {
 		this.active = active;
 	}
 
-	public String getPhoneNumber() {
-		return phoneNumber;
+	public List<Address> getBillingAddress() {
+		return billingAddress;
 	}
 
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
+	public void setBillingAddress(List<Address> billingAddress) {
+		this.billingAddress = billingAddress;
 	}
 
-	public String getEmailAddress() {
-		return emailAddress;
+	public List<Address> getShippingAddress() {
+		return shippingAddress;
 	}
 
-	public void setEmailAddress(String emailAddress) {
-		this.emailAddress = emailAddress;
+	public void setShippingAddress(List<Address> shippingAddress) {
+		this.shippingAddress = shippingAddress;
 	}
-
+	
 }

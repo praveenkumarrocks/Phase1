@@ -81,10 +81,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						 <div class="register-top-grid">
 						 	<h4>${message}</h4>
 							<h3>PERSONAL INFORMATION</h3>
-							<div>
-								<span>User Name<label>*</label></span>
-								<input type="text" id="userName" name="userName"/> 
-							 </div>
 							 <div>
 								<span>First Name<label>*</label></span>
 								<input type="text" id="firstName" name="firstName"/> 
@@ -95,7 +91,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							 </div>
 							 <div>
 								 <span>Email Address<label>*</label></span>
-								 <input id="emailAddress" name="emailAddress" type="email"> 
+								 <input id="emailId" name="emailId" type="email"> 
 							 </div>
 							 <div class="clearfix"> </div>
 							   <a class="news-letter" href="#">

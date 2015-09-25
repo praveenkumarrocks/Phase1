@@ -28,8 +28,8 @@ public class UserTest {
 	@Test
 	public void saveUser(){
 		User user = new User();
-		user.setUsername("admin2");
-		user.setPassword("admin1");
+		user.setEmailId("admin@admin.com");
+		user.setPassword("admin");
 		userRepository.save(user);
 	}
 }
