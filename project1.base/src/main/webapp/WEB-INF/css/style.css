@@ -20,7 +20,7 @@ html, body{
 }
 /*--- Header Part Starts Here --*/
 .header{
-	margin-top:3em;
+	/*margin-top:3em;*/
 }
 .header-top{
 	background:#181818;
@@ -462,7 +462,7 @@ p.customer{
 	-moz-background-size:cover;
 	-ms-background-size:cover;
 	-o-background-size:cover;
-	min-height:400px;
+	/*min-height:400px;*/
 	border-top:3px solid #d4c9c6;
 	border-bottom:3px solid #d4c9c6;
 	text-align:center;

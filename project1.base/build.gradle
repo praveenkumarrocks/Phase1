@@ -111,9 +111,9 @@ archiveName 'project1.war'
 	
 }
 
-task copyJSFiles(type: Copy){
-	from "/src/main/webapp/WEB-INF/html/"
-	into "${tomcatHome}/webapps/project1/WEB-INF/html/"
+task aaaCopyWebappFiles(type: Copy){
+	from "/src/main/webapp/WEB-INF/"
+	into "${tomcatHome}/webapps/project1/WEB-INF/"
 }
 
 task deployToTomcat(type: Copy) {
