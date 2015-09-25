@@ -824,7 +824,7 @@ a.forgot {
 	display: block;
 	text-transform: uppercase;
 }
-.register-top-grid input[type="text"], .register-bottom-grid input[type="password"]{
+.register-top-grid input[type="text"],.register-top-grid input[type="email"], .register-bottom-grid input[type="password"]{
 	border: 1px solid #EEE;
 	outline-color:#FF5B36;
 	width: 96%;
@@ -902,7 +902,7 @@ a.forgot {
 .register-but{
 	margin-top:1em;
 }
-.register-but form input[type="submit"] {
+.register-but input[type="submit"] {
 	background:#fb4d01;
 	color: #FFF;
 	font-size: 0.8em;

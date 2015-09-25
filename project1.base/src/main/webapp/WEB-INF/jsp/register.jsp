@@ -77,20 +77,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 				 <h3 class="new-models">For New Customers</h3>
 				 <div class="register">
-				  	  <form> 
+				  	  <form action="/project1/addUser">
 						 <div class="register-top-grid">
+						 	<h4>${message}</h4>
 							<h3>PERSONAL INFORMATION</h3>
+							<div>
+								<span>User Name<label>*</label></span>
+								<input type="text" id="userName" name="userName"/> 
+							 </div>
 							 <div>
 								<span>First Name<label>*</label></span>
-								<input type="text"> 
+								<input type="text" id="firstName" name="firstName"/> 
 							 </div>
 							 <div>
 								<span>Last Name<label>*</label></span>
-								<input type="text"> 
+								<input type="text" id="lastName" name="lastName"/> 
 							 </div>
 							 <div>
 								 <span>Email Address<label>*</label></span>
-								 <input type="text"> 
+								 <input id="emailAddress" name="emailAddress" type="email"> 
 							 </div>
 							 <div class="clearfix"> </div>
 							   <a class="news-letter" href="#">
@@ -101,21 +106,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								    <h3>LOGIN INFORMATION</h3>
 									 <div>
 										<span>Password<label>*</label></span>
-										<input type="password">
+										<input type="password" id="password" name="password">
 									 </div>
 									 <div>
 										<span>Confirm Password<label>*</label></span>
-										<input type="password">
+										<input type="password" id="confirmPassword" name="confirmPassword">
 									 </div>
 							 </div>
-						</form>
-						<div class="clearfix"> </div>
-						<div class="register-but">
-						   <form>
+							<div class="clearfix"> </div>
+							<div class="register-but">
 							   <input type="submit" value="submit">
 							   <div class="clearfix"> </div>
-						   </form>
-						</div>
+							</div>
+					   </form>
 				   </div>
 			</div>
 			<div class="clearfix"></div>
@@ -129,13 +132,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<li><a href="#">secure payment</a></li>
 			</ul>
 		</div>
-		<ul class="payment-list">
+		<!-- <ul class="payment-list">
 			<li><i class="paypal"></i></li>
 			<li><i class="wi"></i></li>
 			<li><i class="visa"></i></li>
 			<li><i class="amazon"></i></li>
 			<li><i class="sm"></i></li>
-		</ul>
+		</ul> -->
 		<p class="copyright">2014 Template By <a href="http://w3layouts.com/">W3layouts</a></p>
 	</div>
 	<!--- fOOTER Starts Here --->
