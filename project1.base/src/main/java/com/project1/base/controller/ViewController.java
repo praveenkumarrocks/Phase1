@@ -57,4 +57,37 @@ public class ViewController {
 		model.setViewName("register");
 		return model;
 	}
+	
+	@RequestMapping(value = {"/bikes"}, method = RequestMethod.GET)
+	public ModelAndView bikes() {
+		ModelAndView model = new ModelAndView();
+		model.addObject("title", "Bikes!");
+		model.setViewName("bikes");
+		return model;
+	}
+	
+	@RequestMapping(value = {"/best"}, method = RequestMethod.GET)
+	public ModelAndView best() {
+		ModelAndView model = new ModelAndView();
+		model.addObject("title", "Best!");
+		model.setViewName("best");
+		return model;
+	}
+	
+	@RequestMapping(value = {"/contact"}, method = RequestMethod.GET)
+	public ModelAndView contact() {
+		ModelAndView model = new ModelAndView();
+		model.addObject("title", "Contact!");
+		model.setViewName("contact");
+		return model;
+	}
+	
+	@RequestMapping(value = {"/about"}, method = RequestMethod.GET)
+	public ModelAndView about() {
+		ModelAndView model = new ModelAndView();
+		model.addObject("title", "About!");
+		model.setViewName("about");
+		return model;
+	}
+	
 }

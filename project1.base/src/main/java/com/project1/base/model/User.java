@@ -40,8 +40,8 @@ public class User extends AbstractPersistable<Long> {
 	@Column(name = "last_name", length = 45)
 	private String lastName;
 	
-	@Column(name = "is_active")
-	private boolean active;
+	@Column(name = "verified")
+	private boolean verified;
 	
 	@JsonManagedReference
 	@OneToMany(targetEntity = Address.class, mappedBy = "user", fetch = FetchType.LAZY)
@@ -93,12 +93,12 @@ public class User extends AbstractPersistable<Long> {
 		this.lastName = lastName;
 	}
 
-	public boolean isActive() {
-		return active;
+	public boolean isVerified() {
+		return verified;
 	}
 
-	public void setActive(boolean active) {
-		this.active = active;
+	public void setVerified(boolean verified) {
+		this.verified = verified;
 	}
 
 	public List<Address> getBillingAddress() {

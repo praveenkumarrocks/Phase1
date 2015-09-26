@@ -7,12 +7,14 @@ import javax.sql.DataSource;
 
 import org.apache.commons.dbcp.BasicDataSource;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.lookup.JndiDataSourceLookup;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
@@ -21,10 +23,13 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
-@PropertySource("classpath:local-config.properties")
+@PropertySource({"classpath:local-config.properties","classpath:email.properties"})
 @Configuration
 @EnableJpaRepositories(basePackages = "com.project1.base.repository")
 public class AppConfig {
+	
+	@Autowired
+    private Environment env;
 	
 	@Bean
 	public InternalResourceViewResolver internalResourceViewResolver() {
@@ -101,5 +106,22 @@ public class AppConfig {
 	protected PlatformTransactionManager transactionManager(EntityManagerFactory entityManagerFactory) throws Exception {
 		return new JpaTransactionManager(entityManagerFactory);
 	}
+	
+	@Bean
+    public JavaMailSenderImpl javaMailSenderImpl() {
+        final JavaMailSenderImpl mailSenderImpl = new JavaMailSenderImpl();
+        mailSenderImpl.setHost(env.getProperty("smtp.host"));
+        mailSenderImpl.setPort(env.getProperty("smtp.port", Integer.class));
+        mailSenderImpl.setUsername(env.getProperty("smtp.username"));
+        mailSenderImpl.setPassword(env.getProperty("smtp.password"));
+        final Properties javaMailProps = new Properties();
+        javaMailProps.put("mail.smtp.auth", true);
+        javaMailProps.put("mail.smtp.starttls.enable", true);
+        javaMailProps.put("mail.smtp.socketFactory.port", "465"); //SSL Port
+        javaMailProps.put("mail.smtp.socketFactory.class",
+        "javax.net.ssl.SSLSocketFactory"); //SSL Factory Class
+        mailSenderImpl.setJavaMailProperties(javaMailProps);
+        return mailSenderImpl;
+    }
 	
 }

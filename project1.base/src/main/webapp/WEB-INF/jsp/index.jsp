@@ -33,12 +33,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="clear"></div>
 			<div class="navigation">
 				<ul class="navig">
-					<li><a href="bikes.html">Bikes</a></li>
-					<li><a href="best.html">Best Buy</a></li>
-					<li><a href="bikes.html">Offers</a></li>
-					<li><a href="best.html">Accessories</a></li>
-					<li><a href="contact.html">Contact</a></li>
-					<li><a href="about.html">About Us</a></li>
+					<li><a href="/project1/bikes">Bikes</a></li>
+					<li><a href="/project1/best">Best Buy</a></li>
+					<li><a href="/project1/bikes">Offers</a></li>
+					<li><a href="/project1/best">Accessories</a></li>
+					<li><a href="/project1/contact">Contact</a></li>
+					<li><a href="/project1/about">About Us</a></li>
 				</ul>
 				<script>
 					$( "span.menu" ).click(function() {
@@ -68,19 +68,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		    <li>
 		    	<div class="banner">
 					<h1>What a beautiful bike</h1>
-					<h2>timeless, atmospheric<br>& uncredible bikes!</h2>
+					<h2>timeless, atmospheric<br>& incredible bikes!</h2>
 				</div>
 		   	</li>
 		   	<li>
 		    	<div class="banner banner2">
 					<h1>What a beautiful bike</h1>
-					<h2>timeless, atmospheric<br>& uncredible bikes!</h2>
+					<h2>timeless, atmospheric<br>& incredible bikes!</h2>
 				</div>
 		   	</li>
 		   	<li>
 		    	<div class="banner banner1">
 					<h1>What a beautiful bike</h1>
-					<h2>timeless, atmospheric<br>& uncredible bikes!</h2>
+					<h2>timeless, atmospheric<br>& incredible bikes!</h2>
 				</div>
 		   	</li>
 		   	</ul>

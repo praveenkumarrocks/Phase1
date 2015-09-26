@@ -13,4 +13,7 @@ public interface UserRepository extends JpaRepository<User, Long>{
 	@Query("Select u from User u where LOWER(u.emailId) = LOWER(:emailId) and u.password = :password")
 	public User getUser(@Param("emailId") String emailId, @Param("password") String password);
 	
+	@Query("Select u from User u where LOWER(u.emailId) = LOWER(:emailId)")
+	public User findByEmail(@Param("emailId") String emailId);
+	
 }

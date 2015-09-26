@@ -151,29 +151,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				    <div class="address">
 						<i class="pin_icon"></i>
 					    <div class="contact_address">
-						  Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non
+						  Please contact for any information at the below link
 					    </div>
 					    <div class="clearfix"></div>
 					</div>
 					<div class="address">
 						<i class="phone"></i>
 					    <div class="contact_address">
-						   1-25-2568-897
+						   12345-67890
 					    </div>
 					    <div class="clearfix"></div>
 					</div>
 					<div class="address">
 						<i class="mail"></i>
 					    <div class="contact_email">
-						  <a href="mailto:example@gmail.com">info(at)company.com</a>
+						  <a href="mailto:example@gmail.com">info@project1.com</a>
 					    </div>
 					    <div class="clearfix"></div>
 					</div>
 		        </div>
 		        <div class="clearfix"></div>
-		    </div>
-		    <div class="map">
-		    	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387144.007583421!2d-73.97800349999999!3d40.7056308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1413440825630" frameborder="0" style="border:0"></iframe>
 		    </div>
 			</div>
 			<div class="clearfix"></div>

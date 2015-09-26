@@ -39,7 +39,7 @@ public class BaseAuthenticationProvider extends AbstractAuthenticationProvider {
 			throw new BadCredentialsException("Login failed.");
 		}
 		// in the case of locked user 
-		if(!user.isActive()){
+		if(!user.isVerified()){
 			throw new BadCredentialsException("The Login ID has been locked due to multiple unsuccessful login attempts."
 					+ " Please contact your administrator to have your password reset, or wait until your locked account is released (in {0} minutes");
 		}

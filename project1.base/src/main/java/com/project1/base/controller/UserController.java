@@ -4,14 +4,17 @@ import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.project1.base.event.OnRegistrationCompleteEvent;
 import com.project1.base.model.User;
 import com.project1.base.repository.UserRepository;
 
@@ -21,9 +24,12 @@ public class UserController {
 	@Autowired
 	UserRepository userRepository;
 	
+	@Autowired
+	ApplicationEventPublisher applicationEventPublisher;
+	
 	@RequestMapping(value = "/addUser", method = RequestMethod.GET)
 	@ResponseStatus(HttpStatus.OK)
-	public ModelAndView addUser(@RequestParam Map<String, String> params) {
+	public ModelAndView addUser(@RequestParam Map<String, String> params, WebRequest request) {
 		String emailId = params.get("emailId");
 		String password = params.get("password");
 		String confirmPassword = params.get("confirmPassword");
@@ -43,6 +49,8 @@ public class UserController {
 			user.setFirstName(params.get("firstName"));
 			user.setLastName(params.get("lastName"));
 			userRepository.save(user);
+			String appUrl = request.getContextPath();
+			applicationEventPublisher.publishEvent(new OnRegistrationCompleteEvent(user, appUrl));
 			model.setViewName("login");
 			return model;
 		}
