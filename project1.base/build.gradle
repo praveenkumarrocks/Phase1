@@ -40,6 +40,7 @@ allprojects {
 		compile "org.springframework:spring-tx:$springVersion"
 		compile "org.springframework:spring-jdbc:$springVersion"
 		compile "org.springframework:spring-webmvc:$springVersion"
+		compile "org.springframework:spring-context-support:$springVersion"
 		compile "org.springframework.data:spring-data-jpa:1.7.1.RELEASE"
 		compile "org.spockframework:spock-core:0.7-groovy-2.0"
 		compile "org.spockframework:spock-spring:0.7-groovy-2.0"
@@ -75,6 +76,9 @@ allprojects {
 		
 		compile "com.fasterxml.jackson.core:jackson-annotations:2.1.2"
 		compile "com.fasterxml.jackson.core:jackson-databind:2.5.3"
+		
+		compile 'javax.mail:javax.mail-api:1.5.4'
+		compile 'com.sun.mail:javax.mail:1.5.4'		
 	}
 	
 	test {
