@@ -30,7 +30,7 @@ public class LogoutSuccessHandler extends SecurityContextLogoutHandler{
 		RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
 		super.logout(request, response, authentication);		
 	    try {
-			redirectStrategy.sendRedirect(request, response, "/login");
+			redirectStrategy.sendRedirect(request, response, "/index");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

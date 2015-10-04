@@ -39,43 +39,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- Header Starts Here -->
 <div class="header">
 	<div class="container">
-		<div class="header-top">
-			<div class="logo">
-				<a href="index.html"><img src="images/logo.png"></a>
-			</div>
-			<span class="menu"></span>
-			<div class="clear"></div>
-			<div class="navigation">
-				<ul class="navig">
-					<li><a href="bikes.html">Bikes</a></li>
-					<li><a href="best.html">Best Buy</a></li>
-					<li><a href="bikes.html">Offers</a></li>
-					<li><a href="best.html">Accessories</a></li>
-					<li><a href="contact.html">Contact</a></li>
-					<li><a href="about.html">About Us</a></li>
-				</ul>
-				<script>
-					$( "span.menu" ).click(function() {
-					  $( ".navigation ul.navig" ).slideToggle( "slow", function() {
-					    // Animation complete.
-					  });
-					});
-				</script>
-			</div>
-			<div class="clearfix"></div>
-		</div>
 		<div class="about">
 			<div class="prody">
-				<div class="new-product-top">
-					<ul class="product-top-list">
-						<li><a href="index.html">Home</a>&nbsp;<span>&gt;</span></li>
-						<li><a href="#">Account</a>&nbsp;<span>&gt;</span></li>
-						<li><span class="act"><a href="register.html">Register</a></span>&nbsp;</li>
-					</ul>
-					<p class="back"><a href="index.html">Back to Previous</a></p>
-					<div class="clearfix"></div>
-				</div>
-				 <h3 class="new-models">For New Customers</h3>
 				 <div class="register">
 				  	  <form action="/project1/addUser">
 						 <div class="register-top-grid">
@@ -99,44 +64,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							   </a>
 							 </div>
 						     <div class="register-bottom-grid">
-								    <h3>LOGIN INFORMATION</h3>
-									 <div>
-										<span>Password<label>*</label></span>
-										<input type="password" id="password" name="password">
-									 </div>
-									 <div>
-										<span>Confirm Password<label>*</label></span>
-										<input type="password" id="confirmPassword" name="confirmPassword">
-									 </div>
+							<h3>LOGIN INFORMATION</h3>
+								 <div>
+									<span>Password<label>*</label></span>
+									<input type="password" id="password" name="password">
+								 </div>
+								 <div>
+									<span>Confirm Password<label>*</label></span>
+								<input type="password" id="confirmPassword" name="confirmPassword">
 							 </div>
-							<div class="clearfix"> </div>
-							<div class="register-but">
-							   <input type="submit" value="submit">
-							   <div class="clearfix"> </div>
-							</div>
-					   </form>
-				   </div>
+						 </div>
+						<div class="clearfix"> </div>
+						<div class="register-but">
+						   <input type="submit" value="submit">
+						   <div class="clearfix"> </div>
+						</div>
+					</form>
+				</div>
 			</div>
-			<div class="clearfix"></div>
-			<!--- fOOTER Starts Here --->
-		<div class="footer-top abt-ft">
-			<ul class="bottom-list">
-				<li><a href="#">terms & conditions</a></li>
-				<li><a href="#">return policy</a></li>
-				<li><a href="#">reviews</a></li>
-				<li><a href="#">about shop</a></li>
-				<li><a href="#">secure payment</a></li>
-			</ul>
 		</div>
-		<!-- <ul class="payment-list">
-			<li><i class="paypal"></i></li>
-			<li><i class="wi"></i></li>
-			<li><i class="visa"></i></li>
-			<li><i class="amazon"></i></li>
-			<li><i class="sm"></i></li>
-		</ul> -->
-		<p class="copyright">2014 Template By <a href="http://w3layouts.com/">W3layouts</a></p>
 	</div>
-	<!--- fOOTER Starts Here --->
+</div>
 </body>
 </html>

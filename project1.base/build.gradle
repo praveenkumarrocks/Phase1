@@ -15,7 +15,6 @@ allprojects {
 		springVersion = "4.1.6.RELEASE"
 		springSecurityVersion = "4.0.0.RELEASE"
 		slf4jVersion = "1.7.12"		
-		jstlVersion = "1.2"
 		servletVersion = "3.1.0"	
 	}
 	
@@ -96,24 +95,22 @@ allprojects {
 
 apply plugin: 'war'
 sourceCompatibility = '1.8'
-dependencies {
-
-	providedCompile "javax.servlet.jsp:jsp-api:2.1"
-	providedCompile "javax.servlet:javax.servlet-api:"+servletVersion
-	compile "jstl:jstl:"+jstlVersion	
-	compile project(':project1.common')
-}
-
-ext{
+	ext{
 		tomcatHome = "F:/Tomcat8026"
 		jstlVersion = "1.2"
 		servletVersion = "3.1.0"	
 	}
+	dependencies {
+		providedCompile "javax.servlet.jsp:jsp-api:2.1"
+		providedCompile "javax.servlet:javax.servlet-api:"+servletVersion
+		compile "jstl:jstl:"+jstlVersion	
+		compile project(':project1.common')
+	}
 
-war{
-archiveName 'project1.war'
-	
-}
+
+	war{
+		archiveName 'project1.war'
+	}
 
 task aaaCopyWebappFiles(type: Copy){
 	from "/src/main/webapp/WEB-INF/"

@@ -56,12 +56,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="clear"></div>
 			<div class="navigation">
 				<ul class="navig">
-					<li><a href="bikes.html">Bikes</a></li>
-					<li><a href="best.html">Best Buy</a></li>
-					<li><a href="bikes.html">Offers</a></li>
-					<li><a href="best.html">Accessories</a></li>
-					<li><a href="contact.html">Contact</a></li>
-					<li><a href="about.html">About Us</a></li>
+					<li><a href="/project1/bikes">Bikes</a></li>
+					<li><a href="/project1/best">Best Buy</a></li>
+					<li><a href="/project1/bikes">Offers</a></li>
+					<li><a href="/project1/best">Accessories</a></li>
+					<li><a href="/project1/contact">Contact</a></li>
+					<li><a href="/project1/about">About Us</a></li>
 				</ul>
 				<script>
 					$( "span.menu" ).click(function() {
@@ -191,8 +191,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<li><i class="amazon"></i></li>
 			<li><i class="sm"></i></li>
 		</ul>
-		<p class="copyright">2014 Template By <a href="http://w3layouts.com/">W3layouts</a></p>
 	</div>
-	<!--- fOOTER Starts Here --->
 </body>
 </html>

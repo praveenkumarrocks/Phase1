@@ -327,7 +327,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<li><i class="amazon"></i></li>
 			<li><i class="sm"></i></li>
 		</ul>
-		<p class="copyright">2014 Template By <a href="http://w3layouts.com/">W3layouts</a></p>
 	</div>
 	<!--- fOOTER Starts Here --->
 </body>

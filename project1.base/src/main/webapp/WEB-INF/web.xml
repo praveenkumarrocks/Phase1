@@ -14,6 +14,10 @@ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
                 org.springframework.web.context.support.AnnotationConfigWebApplicationContext
             </param-value>
         </init-param>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>com.project1.base.config.AppConfig</param-value>
+        </init-param>
     </servlet>
 	
 	<!-- Configure ContextLoaderListener to use AnnotationConfigWebApplicationContext

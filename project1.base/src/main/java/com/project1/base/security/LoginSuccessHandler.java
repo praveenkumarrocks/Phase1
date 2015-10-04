@@ -53,7 +53,7 @@ public class LoginSuccessHandler extends SimpleUrlAuthenticationSuccessHandler{
         }
  
         if (isUser(roles)) {
-            url = "/";
+            url = "/index";
         } else {
             url="/accessDenied";
         }

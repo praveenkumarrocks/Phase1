@@ -1,16 +1,10 @@
-<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE HTML>
-<html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
-<title>Bicycleshop Bootstarp Website Template | Home :: w3layouts</title>
+<title>Home</title>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 <!-- Custom Theme files -->
 <link href="css/style.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
@@ -39,6 +33,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<li><a href="/project1/best">Accessories</a></li>
 					<li><a href="/project1/contact">Contact</a></li>
 					<li><a href="/project1/about">About Us</a></li>
+					<li>
+			            <a href="#" class="login">
+			            	<span></span>
+			            	Log In
+			            </a>
+			        </li>
+			        <li>
+			            <a href="#" class="signUp">
+			            	<span></span>
+			            	Sign Up
+			            </a>
+			        </li>
+					<li><a href="/project1/logout">Logout</a></li>
 				</ul>
 				<script>
 					$( "span.menu" ).click(function() {
@@ -46,6 +53,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					    // Animation complete.
 					  });
 					});
+					$('.login').click( function() { window.open("/project1/login",null,"height=300,width=400,status=yes,toolbar=no,menubar=no,location=no"); return false; } );
+					$('.signUp').click( function() { window.open("/project1/register",null,"height=300,width=400,status=yes,toolbar=no,menubar=no,location=no"); return false; } );
 				</script>
 
 			</div>
@@ -251,8 +260,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<li><i class="amazon"></i></li>
 			<li><i class="sm"></i></li>
 		</ul>
-		<p class="copyright">2014 Template By <a href="http://w3layouts.com/">W3layouts</a></p>
 	</div>
-	<!--- fOOTER Starts Here --->
 </body>
 </html>

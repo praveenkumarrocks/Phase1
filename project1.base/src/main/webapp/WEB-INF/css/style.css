@@ -592,7 +592,7 @@ p.copyright a:hover{
 }
 /*---- About Us Starts Here ---*/
 .about{
-	min-height:800px;
+	/*min-height:800px;*/
 	margin-top:1em;
 }
 /*--- Responsive Tabs ---*/
@@ -744,7 +744,7 @@ ul.tab_list li a:hover {
 	line-height: 1.8em;
 }
 .prodys {
-	min-height: 300px!important;
+	/*min-height: 300px!important;*/
 }
 .login-right{
 	padding:0;
