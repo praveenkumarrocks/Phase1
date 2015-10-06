@@ -45,6 +45,7 @@ allprojects {
 		compile "org.spockframework:spock-spring:0.7-groovy-2.0"
 		compile "org.codehaus.groovy:groovy:2.3.8"
 		compile "org.springframework.security:spring-security-test:"+springSecurityVersion
+		compile "org.springframework.security:spring-security-taglibs:"+springSecurityVersion
 		
 		//Logging dependencies
 		compile "org.slf4j:slf4j-api:$slf4jVersion"

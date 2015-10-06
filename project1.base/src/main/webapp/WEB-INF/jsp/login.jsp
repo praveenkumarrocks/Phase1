@@ -1,3 +1,4 @@
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
@@ -31,23 +32,39 @@
 </head>
 <body>
 	<div class="new-product prodys">
-		<div class="account_grid">
-		   <div class="col-md-6 login-right">
-		  	<h3>LOGIN</h3>
-			<form th:action="@{/login}" method="post">
-			  <div>
-				<input type="text" name="userName" id="userName" placeholder="Enter Email Address"> 
-			  </div>
-			  <div>
-				<input type="password" name="password" id="password" placeholder="Enter Password"> 
-			  </div>
-			  <input type="submit" value="Login"><a class="forgot" href="#">Forgot Your Password?</a>
-		    </form>
-		    <div style="display: inline-flex;"><span>New to Project1?</span><span><a class="signUp" href="#">SIGN UP</a></span></div>
-		   </div>	
-		   <div class="clearfix"> </div>
-		 </div>
+		<sec:authorize access="isAnonymous()">
+			<div class="account_grid">
+			   <div id="loginDiv" class="col-md-6 login-right">
+			  	<h3>LOGIN</h3>
+				<form th:action="@{/login}" method="post" name="loginform">
+				  <div>
+					<input type="text" name="userName" id="userName" placeholder="Enter Email Address"> 
+				  </div>
+				  <div>
+					<input type="password" name="password" id="password" placeholder="Enter Password"> 
+				  </div>
+				  <!-- <input type="button" value="Login" onclick="closeAndRefresh();"><a class="forgot" href="#">Forgot Your Password?</a> -->
+				  <input type="submit" value="Login"><a class="forgot" href="#">Forgot Your Password?</a>
+			    </form>
+			    <div style="display: inline-flex;"><span>New to Project1?</span><span><a class="signUp" href="#">SIGN UP</a></span></div>
+			   </div>	
+			   <div class="clearfix"> </div>
+			 </div>
+		 </sec:authorize>
+		 <sec:authorize access="isAuthenticated()">
+			 <div id="closelink">
+	            <a href="javascript:opener.location.reload(true);window.close();">Click Here to Close this Page</a>
+	        </div>
+        </sec:authorize>
 		 <script>
+		 	function closeAndRefresh(){
+		 		document.forms['loginform'].submit();
+		 		//$("#loginDiv").css("display","none");
+		 		//$("#closelink").css("display","block");
+		 		opener.location.reload(true);
+		 	    return true;
+		 	}
+		 	
 			$('.signUp').click( function() { window.open("/project1/register",null,"height=300,width=400,status=yes,toolbar=no,menubar=no,location=no"); return false; } );
 		</script>
 	</div>

@@ -1,5 +1,6 @@
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <title>Home</title>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
@@ -33,19 +34,23 @@
 					<li><a href="/project1/best">Accessories</a></li>
 					<li><a href="/project1/contact">Contact</a></li>
 					<li><a href="/project1/about">About Us</a></li>
-					<li>
-			            <a href="#" class="login">
-			            	<span></span>
-			            	Log In
-			            </a>
-			        </li>
-			        <li>
-			            <a href="#" class="signUp">
-			            	<span></span>
-			            	Sign Up
-			            </a>
-			        </li>
-					<li><a href="/project1/logout">Logout</a></li>
+					<sec:authorize access="isAnonymous()">
+						<li>
+				            <a href="#" class="login">
+				            	<span></span>
+				            	Log In
+				            </a>
+				        </li>
+				        <li>
+				            <a href="#" class="signUp">
+				            	<span></span>
+				            	Sign Up
+				            </a>
+				        </li>
+    				</sec:authorize>
+    				<sec:authorize access="isAuthenticated()">
+        				<li><a href="/project1/logout">Logout</a></li>
+    				</sec:authorize>	
 				</ul>
 				<script>
 					$( "span.menu" ).click(function() {
